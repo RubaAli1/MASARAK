@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html lang="ar">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device, initial-scale=1.0">
-        <title>Masarak-مسارك</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <main class="hero">
-           <img src="Masark-logo.png-removebg-preview.png" alt="شعار Masarak-مسارك" class="Masark-logo">
-           <h2 class="main-title">هل انت محتار في اختيار المجال اللذي يناسبك؟</h2>
-           <h3 class="sub-title">ابدأ الإختبار الآن واكتشف مسارك المهني</h3>
-               <button id="start-btn">ابدأ</button>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masarak | مسارك - اكتشف مستقبلك</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="مسارك - اكتشف مسارك المهني والتخصص الجامعي الأنسب لك من خلال اختبار تحليل الشخصية المتطور لعام 2026.">
+    <meta name="keywords" content="تحديد المسار, اختيار التخصص, اختبار مهني, مسارك, مستقبل مهني">
+</head>
+<body>
 
-        </main>
+    <header class="header">
+        <img src="Masark-logo.png-removebg-preview.png" alt="شعار مسارك" class="logo">
+        <div class="hero-text">
+            <h1 class="main-title">هل أنت محتار في اختيار المجال الذي يناسبك؟</h1>
+            <p class="sub-title">ابدأ اختبار "مسارك" التحليلي المتطور واكتشف خارطة طريقك المهنية.</p>
+        </div>
+        <button id="start-btn" class="btn-primary">ابدأ الاختبار الآن</button>
+    </header>
 
+    <main class="container">
         <section id="quiz-section" class="hidden">
-        <form id="quiz-form">
-        </form>
-        <button id="submit-btn" class="hidden">تقييم</button>
-        <div id="result" class="hidden"></div>
-    </section>
+            <div id="quiz-container">
+                </div>
+            <div class="actions">
+                <button id="submit-btn" class="btn-submit">تحليل النتائج</button>
+            </div>
+        </section>
+
+        <section id="result-section" class="hidden">
+            <h2 class="section-title">تحليل مسارك المهني</h2>
+            <div class="dashboard">
+                <div id="top-fields-grid" class="results-grid"></div>
+                <div class="chart-container">
+                    <canvas id="resultsChart"></canvas>
+                </div>
+            </div>
+            <button onclick="location.reload()" class="btn-secondary">إعادة الاختبار</button>
+        </section>
+    </main>
 
     <footer>
-        <br><br>
-        <p>RUBA 2026 © </p>
+        <p>تم التطوير بواسطة <strong>RUBA</strong> &copy; 2026</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-        
-
-
-    </body>
-
-
+</body>
 </html>
